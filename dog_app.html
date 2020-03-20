@@ -13213,20 +13213,7 @@ dogImages.zip        59%[==========&gt;         ] 642.85M  62.6MB/s    eta 8s   
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13259,6 +13246,1338 @@ dogImages.zip        59%[==========&gt;         ] 642.85M  62.6MB/s    eta 8s   
 There are 8351 total dog images.
 </pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[97]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Extract the dogs&#39; names </span>
+<span class="n">dogs</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8350</span><span class="p">):</span>
+    <span class="n">dog_name</span><span class="o">=</span><span class="n">dog_files</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">dogs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dog_name</span><span class="p">)</span>
+<span class="n">dogs</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[97]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Mastiff&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Doberman_pinscher&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Curly-coated_retriever&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Borzoi&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Bichon_frise&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Chinese_crested&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Finnish_spitz&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Welsh_springer_spaniel&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Bedlington_terrier&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Papillon&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Saint_bernard&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Australian_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Parson_russell_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Norfolk_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Yorkshire_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Boston_terrier&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Norwegian_buhund&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Bluetick_coonhound&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Field_spaniel&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Tibetan_mastiff&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Alaskan_malamute&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ &#39;Manchester_terrier&#39;,
+ ...]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Count each breed</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">dogs</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dogs</span><span class="p">)</span>
+<span class="n">dogs</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span> <span class="p">:</span><span class="s1">&#39;Breeds&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">dogs</span><span class="p">[</span><span class="s1">&#39;Breeds&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[98]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Alaskan_malamute                  96
+Border_collie                     93
+Basset_hound                      92
+Dalmatian                         89
+Bull_terrier                      87
+Basenji                           86
+Bullmastiff                       86
+Cavalier_king_charles_spaniel     84
+Australian_shepherd               83
+Australian_cattle_dog             83
+Irish_terrier                     82
+American_staffordshire_terrier    82
+Dachshund                         82
+Bernese_mountain_dog              81
+Briard                            81
+Boston_terrier                    81
+Belgian_sheepdog                  80
+Bloodhound                        80
+Cane_corso                        80
+American_eskimo_dog               80
+Boxer                             80
+Golden_retriever                  80
+Affenpinscher                     80
+Flat-coated_retriever             79
+Akita                             79
+Cairn_terrier                     79
+Papillon                          79
+Chow_chow                         78
+Belgian_malinois                  78
+German_shepherd_dog               78
+                                  ..
+Giant_schnauzer                   51
+Silky_terrier                     51
+Black_russian_terrier             51
+Great_dane                        50
+English_toy_spaniel               49
+Pharaoh_hound                     49
+Old_english_sheepdog              49
+Black_and_tan_coonhound           46
+Irish_red_and_white_setter        46
+Bluetick_coonhound                44
+Kerry_blue_terrier                44
+Otterhound                        44
+Finnish_spitz                     42
+Portuguese_water_dog              42
+American_water_spaniel            42
+Field_spaniel                     41
+Lowchen                           41
+Norwegian_lundehund               41
+Pointer                           40
+Neapolitan_mastiff                39
+Petit_basset_griffon_vendeen      39
+Parson_russell_terrier            38
+Smooth_fox_terrier                38
+Yorkshire_terrier                 38
+Wirehaired_pointing_griffon       37
+Saint_bernard                     37
+Manchester_terrier                36
+Plott                             35
+Xoloitzcuintli                    33
+Norwegian_buhund                  33
+Name: Breeds, Length: 133, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[122]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dogs</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[122]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Breeds</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>8350</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>133</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>Alaskan_malamute</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>96</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[99]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dogs</span><span class="p">[</span><span class="s1">&#39;Breeds&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[99]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Alaskan_malamute    96
+Border_collie       93
+Basset_hound        92
+Dalmatian           89
+Bull_terrier        87
+Name: Breeds, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dogs</span><span class="p">[</span><span class="s1">&#39;Breeds&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="o">-</span><span class="mi">5</span><span class="p">:]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[102]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Saint_bernard         37
+Manchester_terrier    36
+Plott                 35
+Xoloitzcuintli        33
+Norwegian_buhund      33
+Name: Breeds, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[121]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Visualize most  and least breeds of dog</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">dog_type</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Alaskan_malamute&#39;</span><span class="p">,</span> <span class="s1">&#39;Border_collie&#39;</span><span class="p">,</span> <span class="s1">&#39;Basset_hound&#39;</span><span class="p">,</span> <span class="s1">&#39;Dalmatian&#39;</span><span class="p">,</span> <span class="s1">&#39;Bull_terrier&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;Saint_bernard&#39;</span><span class="p">,</span> <span class="s1">&#39;Manchester_terrier&#39;</span><span class="p">,</span> <span class="s1">&#39;Plott&#39;</span><span class="p">,</span> <span class="s1">&#39;Xoloitzcuintli&#39;</span><span class="p">,</span> <span class="s1">&#39;Norweigian_buhund&#39;</span><span class="p">]</span>
+<span class="n">dog_counts</span> <span class="o">=</span> <span class="p">[</span><span class="mi">96</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span><span class="mi">37</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">33</span><span class="p">]</span>
+
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">dog_type</span><span class="p">,</span> <span class="n">dog_counts</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Breeds&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Counts&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Most 5 breeds Vs. Least 5 breeds&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
 </div>
 
 </div>
